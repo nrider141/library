@@ -11,7 +11,7 @@ var urlencodedParser = bodyParser.json();
 // });
 
 app.get('/', function(req, res) {
-    res.sendFile('/public/form.html');
+    res.sendFile(__dirname + '/public/form.html');
 });
 
 app.get('/form.js', function(req, res) {

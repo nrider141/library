@@ -7,7 +7,7 @@
 </head>
 
 <body ng-app="myApp">
-    <form method="POST" ng-controller="myCtrl">
+    <form method="POST" action="/public/index.html" ng-controller="myCtrl">
         User Name: <input type="text" name="username" ng-model="username"><br> 
         Password: <input type="text" name="password" ng-model="password">
         <button ng-click="send()">Login</button>
