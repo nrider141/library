@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Sign In</title>
+</head>
+
+<body ng-app="myApp">
+    <form method="POST" ng-controller="myCtrl">
+        User Name: <input type="text" name="username" ng-model="username"><br> 
+        Password: <input type="text" name="password" ng-model="password">
+        <button ng-click="send()">Login</button>
+    </form>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+</body>
+
+</html>
