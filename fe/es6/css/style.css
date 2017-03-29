@@ -1,0 +1,21 @@
+body {
+    margin:0;
+    padding:0;
+    display: flex;
+    flex-flow: column wrap;
+    align-content: center;
+}
+
+h1 {
+    color:gray;
+    width: 100%;
+} 
+
+#farm {
+    width: 80%;
+    border: 1px solid lightslategrey;
+    margin: 0 auto;
+    display: flex;
+    flex-flow: row wrap;
+}
+

@@ -4,11 +4,11 @@ app.controller('myCtrl', function($scope, $http) {
         $http({
             method: 'POST',
             url: '/login',
-            data: { username: $scope.username, password: $scope.password }
+            data: { username: $scope.username, age: $scope.age, password: $scope.password }
         }).then(function successCallback(response) {
             location.replace(response.data);
         }, function errorCallback(response) {
-                alert('Sorry, try again later');
+                alert('Sorry, you are unable to login');
         });
     }
 

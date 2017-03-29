@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body ng-app="myApp">
+    <form method="GET" ng-controller="myCtrl">
+        User Name: <input type="text" name="username" ng-model="username"><br>
+            Age: <input type="number" name="age" ng-model="age"><br>
+        Password: <input type="text" ng-model="password">
+        <button ng-click="send()">Log In</button>
+    </form>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.js"></script>
+    <!--<script src="/client/form.js"></script>-->
+</body>
+</html>
