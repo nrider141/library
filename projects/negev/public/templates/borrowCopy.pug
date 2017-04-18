@@ -1,0 +1,27 @@
+extends layout
+
+.modal-header
+  h3#modal-title.modal-title Borrow Copy
+.error(ng-if="$ctrl.copy.status!='Available'")  book is not available
+#modal-body.modal-body
+  form
+    .form-group
+      label(for='ISBN') ISBN
+      |  
+      input.form-control(type='text', ng-model='$ctrl.book.ISBN', disabled='')
+    .form-group
+      label(for='title') Title
+      |  
+      input.form-control(type='text', ng-model='$ctrl.book.title', disabled='')
+    .form-group
+      label(for='title') Copy
+      |  
+      input.form-control(type='text', ng-model='$ctrl.copy.copyId', disabled='')
+    .form-group(ng-if="$ctrl.copy.status=='Available'")
+      label(for='title') Borrower Id
+      |  
+      input.form-control(type='text', ng-model='$ctrl.borrowerId')
+.modal-footer
+  button.btn.btn-primary(ng-if="$ctrl.copy.status=='Available'", type='button', ng-click='$ctrl.bookCopy()') Book
+  |  
+  button.btn.btn-warning(type='button', ng-click='$ctrl.cancel()') Cancel

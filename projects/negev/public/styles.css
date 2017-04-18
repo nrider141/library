@@ -1,0 +1,23 @@
+*{
+    box-sizing: border-box;
+}
+
+.navbar-left {
+    display: flex;
+    align-items: center;
+
+}
+
+.navbar-left > * {
+    padding: 0px 10px;
+}
+
+.book-container {
+    box-shadow: 5px 5px 25px 0px rgba(119,119,119,1);
+    padding: 0.35em 1em ;
+    background-color: #fff;
+}
+.error{
+	text-align:center;
+	color:red;
+}

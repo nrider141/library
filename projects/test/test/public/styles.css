@@ -1,0 +1,9 @@
+.navbar-left {
+    display: flex;
+    align-items: center;
+
+}
+
+.navbar-left > * {
+    padding: 0px 10px;
+}

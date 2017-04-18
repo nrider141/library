@@ -1,0 +1,22 @@
+extends layout
+
+form(ng-submit='model.searchForBorrowers()')
+  .form-group
+    input.form-control(type='text', placeholder='Search for borrowers', ng-model='model.searchText')
+  |  
+  button.btn.btn-default(type='submit') Submit
+  |  
+  button.btn.btn-default(type='add borrower', ng-click='model.addBorrowers($event)') Add a Borrower
+h4
+  | Enter your search input
+.container(ng-show='model.borrowers')
+  div(ng-if='model.borrowers.length == 0')
+    h4  No borrower Found
+  div(ng-show='model.borrowers', ng-if='model.borrowers.length !== 0')
+    h4  Borrower names:
+    .book-container(ng-repeat='borrower in model.borrowers', ng-click='showDetails = ! showDetails')
+      h4  {{borrower.name}}
+      div(ng-show='showDetails')
+        h4(ng-repeat='(key, value) in book')
+          b {{key}} :
+          |  {{value}}

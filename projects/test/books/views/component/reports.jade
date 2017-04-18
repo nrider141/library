@@ -1,0 +1,22 @@
+include ../mixins/card.jade
+//- table
+//-     thead
+//-         tr
+//-             th ISBN
+//-             th title
+//-             th author
+//-             th price
+//-             th genre
+//-             th copies
+//-     tbody
+//-         each item, i in test
+//-             tr
+//-                 td= item.ISBN
+//-                 td= item.title
+//-                 td= item.author
+//-                 td= item.price
+//-                 td= item.genre
+//-                 td= item.copies
+
+each book, index in test
+    +card(book)

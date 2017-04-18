@@ -1,0 +1,18 @@
+extends layout
+
+nav.navbar.navbar-default(ng-show='model.loginService.isAuthenticated')
+  .container-fluid
+    a.navbar-brand(href='#') Library
+  #bs-example-navbar-collapse-1.collapse.navbar-collapse
+    ul.nav.navbar-nav
+      li
+        a(ui-sref='books', ui-sref-active='active') Homepage
+      li
+        a(ui-sref='borrowers', ui-sref-active='active') Borrowers
+      li
+        a(ui-sref='bookCopy', ui-sref-active='active') Book-Copy
+    ul.nav.navbar-nav.navbar-right
+      li
+        a(ui-sref='report') Report
+      li.dropdown
+        a(href='#', ng-click='model.logout($event)') Logout

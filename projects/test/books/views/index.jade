@@ -1,0 +1,16 @@
+extends layout
+
+body
+    div(class="header")
+    div(class="wrapper")
+        div(class="sideBar")
+        div(class="reports")
+            //- include ./component/menu.jade
+            p Welcome to #{title}
+                .container
+                    .row
+                        h1 Welcome to The Library
+                    .row
+                        include ./component/addBook.jade
+                    .row
+                        include ./component/reports.jade

@@ -1,0 +1,25 @@
+extends ./../layout
+
+block content
+    .main.container(ng-app='myApp', ng-controller='GreetingController')
+        .row
+            .col-md-6.col-md-offset-3
+            h1.display-4.m-b-2 Sign Up
+            // register form
+            form(method='POST', action='/register')
+                .form-group
+                label(for='ISBN') ISBN:
+                input#ISBN.form-control(type='text', placeholder='{{greeting}}', name='ISBN')
+                .form-group
+                label(for='title') Title:
+                input#title.form-control(type='text', placeholder='Book title', name='title')
+                .form-group
+                label(for='author') Author:
+                input#author.form-control(type='text', placeholder='Book author', name='author')
+                .form-group
+                label(for='genre') Genre:
+                input#genre.form-control(type='text', name='genre')
+                .form-group
+                label(for='price') Price:
+                input#price.form-control(type='number', name='price')
+                button.btn.btn-primary(type='submit') Add A Book.

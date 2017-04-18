@@ -1,0 +1,25 @@
+extends layout
+
+.bookCopy-container
+  .form-group
+    label(for='search copy id') ISBN
+    |  
+    input.form-control(type='text', placeholder='copy id', ng-model='$ctrl.copyId')
+  |  
+  button.btn.btn-default(ng-click='$ctrl.searchCopy($event)') Search
+  .copyContainer(ng-repeat='book in $ctrl.copies')
+    table.table.table-striped
+      tbody
+        tr(ng-repeat='copy in book.copies')
+          td {{copy.copyId}}
+          td
+            span(ng-if='!$ctrl.editCopyFlag') {{copy.status}}
+            .form-group(ng-if='$ctrl.editCopyFlag')
+              input.form-control(type='text', placeholder='copy id', ng-model='copy.status')
+          td {{copy.lastBorrowed}}
+          td
+            button.btn.btn-default(ng-click='$ctrl.editCopy(book)') {{$ctrl.editLabel}}
+            |  
+            button.btn.btn-default(ng-click='$ctrl.borrowBook(book,copy)') Book
+            |  
+            button.btn.btn-default(ng-click='$ctrl.returnCopy(book,copy)') Return

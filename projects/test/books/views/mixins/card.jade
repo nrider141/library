@@ -1,0 +1,8 @@
+mixin card(object)
+    //- .row 
+    .col-lg-2.col-sm-3.col-xs-4
+      h3
+        b= object.title
+        //- a(href=object.link)
+      img.thumbnail.img-responsive(src="https://cdn.fansided.com/wp-content/blogs.dir/369/files/2016/02/Screen-Shot-2016-02-26-at-12.13.40-PM.jpg")
+      p.lead #{object.author}  #{object.ISBN}

@@ -1,0 +1,39 @@
+extends layout
+
+.modal-header
+  h3#modal-title.modal-title Add a Book
+#modal-body.modal-body
+  form
+    .form-group
+      label(for='ISBN') ISBN
+      |  
+      input.form-control(type='text', placeholder='ISBN', ng-model='$ctrl.book.ISBN')
+    .form-group
+      label(for='authors') Authors
+      |  
+      input.form-control(type='text', placeholder='authors', ng-model='$ctrl.author')
+      p.help-block Each author needs to be seperated by a comma.
+    .form-group
+      label(for='title') Title
+      |  
+      input.form-control(type='text', placeholder='title', ng-model='$ctrl.book.title')
+    .form-group
+      label(for='description') Description
+      |  
+      input.form-control(type='text', placeholder='description', ng-model='$ctrl.book.description')
+    .form-group
+      label(for='copyId') Copy-Id
+      |  
+      input.form-control(type='text', placeholder='copyId', ng-model='$ctrl.copyId')
+    .form-group
+      label(for='price') Price
+      |  
+      input.form-control(type='text', placeholder='price', ng-model='$ctrl.book.price')
+    .form-group
+      label(for='price') Image URL
+      |  
+      input.form-control(type='text', placeholder='image URL', ng-model='$ctrl.book.imgSrc')
+.modal-footer
+  button.btn.btn-primary(type='button', ng-click='$ctrl.ok()') OK
+  |  
+  button.btn.btn-warning(type='button', ng-click='$ctrl.cancel()') Cancel

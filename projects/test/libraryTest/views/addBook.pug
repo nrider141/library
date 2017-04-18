@@ -1,0 +1,54 @@
+extends layout
+mixin card
+	.ui.card
+		.image
+			img(src='http://lorempixel.com/g/200/200')
+		.content
+			a.header Kristy
+			.meta
+				span.date Joined in 2013
+			.description  Kristy is an art director living in New York.
+		.extra.content
+
+block content
+	form.ui.form
+	.field
+		label Book ISBN
+		|  
+		input(type='text', name='book-ISBN')
+	.field
+		label Book Title
+		|  
+		input(type='text', name='book-title')
+	.field
+		label Authors
+		|  
+		input(type='text', name='book-authors')
+	.field
+		label Genres
+		|  
+		input(type='text', name='book-genres')
+	.field
+		label Price
+		|  
+		input(type='text', name='book-price')
+	.field
+		label copies
+		|  
+		input(type='text', name='book-copies')
+
+	br
+	
+	button.ui.button(type='submit') Submit
+	
+	br
+	br
+
+	.ui.link.cards
+		+card
+		+card
+		+card
+		+card
+		+card
+		+card
+		+card

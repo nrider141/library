@@ -1,0 +1,41 @@
+extends layout
+
+uib-tabset(active='active')
+  uib-tab(index='1', heading='borrowed books')
+    table.table
+      thead
+        tr
+          td Title
+          td Copy-ID
+      tbody
+      tr(ng-repeat='book in borrowedBooks')
+        td {{book.title}}
+        td
+          ul(style='list-style:none')
+            li(ng-repeat='copy in book.copies') {{copy.copyId}}
+  uib-tab(index='2')
+    uib-tab-heading Late books
+    table.table
+      thead
+        tr
+          td Title
+          td Copy-ID
+      tbody
+        tr(ng-repeat='book in lateBooks')
+          td {{book.title}}
+          td
+            ul(style='list-style:none')
+              li(ng-repeat='copy in book.copies') {{copy.copyId}}
+  uib-tab(index='3')
+    uib-tab-heading  Active Borrowers
+    table.table
+      thead
+        tr
+          td Name
+          td Email
+          td Phone
+      tbody
+        tr(ng-repeat='borrower in activeBorrowers')
+          td {{borrower.name}}
+          td {{borrower.email}}
+          td {{borrower.phone}}

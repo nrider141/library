@@ -1,0 +1,29 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    link(href='//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css', rel='stylesheet')
+    
+  body
+    block content
+      .navbar.navbar-inverse.navbar-fixed-top
+        .container
+          .navbar-header
+            button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-collapse')
+              span.icon-bar
+              span.icon-bar
+              span.icon-bar
+            a.navbar-brand(href='') Library
+          .navbar-collapse.collapse
+            ul.nav.navbar-nav
+              li
+                a(href='') Books
+              li
+                a(href='/login') Login
+            form.navbar-form.navbar-right
+              .form-group
+                input.form-control(type='text', placeholder='Email')
+              .form-group
+                input.form-control(type='password', placeholder='Password')
+              button.btn.btn-success(type='submit') Sign in

@@ -1,0 +1,39 @@
+extends layout
+block content
+
+	style(type='text/css').
+		body {
+		background-color: #EEE;
+		}
+		body > .grid {
+		height: 100%;
+		}
+		.image {
+		margin-top: -100px;
+		}
+		.column {
+		max-width: 450px;
+		}
+
+	.ui.middle.aligned.center.aligned.grid
+		.column
+			h2.ui.teal.image.header
+				img.image(src='assets/images/logo.png')
+				.content  Log-in to your account
+			form.ui.large.form
+				.ui.stacked.segment
+					.field
+						.ui.left.icon.input
+							i.user.icon
+							|  
+							input(type='text', name='email', placeholder='Email address')
+					.field
+						.ui.left.icon.input
+							i.lock.icon
+							|  
+							input(type='password', name='password', placeholder='Password')
+					.ui.fluid.large.teal.submit.button Login
+				.ui.error.message
+			.ui.message
+				| New to us? 
+				a(href='#') Sign Up

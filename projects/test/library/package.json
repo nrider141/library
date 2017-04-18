@@ -1,0 +1,22 @@
+{
+  "name": "mongo",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "nodemon ./bin/www"
+  },
+  "dependencies": {
+    "body-parser": "~1.17.1",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.3",
+    "express": "~4.15.2",
+    "jade": "~1.11.0",
+    "mongodb": "^2.2.25",
+    "mongoose": "^4.9.3",
+    "morgan": "~1.8.1",
+    "static-favicon": "~1.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.11.0"
+  }
+}
