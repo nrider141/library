@@ -16,8 +16,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(favicon());
 app.use('/', index);
 
-app.set('templates', path.join(__dirname, 'templates'));
+app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
+app.locals.pretty = true;
 
 app.use(logger('dev'));
 

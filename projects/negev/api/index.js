@@ -6,7 +6,7 @@ const Login = require("../models/login");
 
 
 router.get('/', function (req, res) {
-    res.render('/templates/index', { title: 'Library' });
+    res.render('index', { title: 'Library' });
 })
 
 router.post('/login', function (req, res) {
