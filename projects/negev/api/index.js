@@ -5,8 +5,8 @@ const router = express.Router();
 const Login = require("../models/login");
 
 
-router.post('/', function (req, res) {
-    res.render('/templates/index', { title: 'Library' });
+router.post('/templates', function (req, res) {
+    res.render('index', { title: 'Library' });
 })
 
 router.post('/login', function (req, res) {
