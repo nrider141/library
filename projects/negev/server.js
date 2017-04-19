@@ -18,6 +18,12 @@ app.use('/', index);
 
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
+
+router.get('/views/:name', function (req, server) {
+    var name = req.params.name;
+    server.render(name);
+});
+
 app.locals.pretty = true;
 
 app.use(logger('dev'));

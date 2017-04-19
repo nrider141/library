@@ -13,10 +13,10 @@
     "angular-ui-router": "^0.4.2",
     "body-parser": "^1.17.1",
     "express": "^4.15.2",
-    "pug": "2.0.0-beta11",
     "mongoose": "^4.9.5",
     "morgan": "~1.0.1",
-    "static-favicon": "~1.0.2",
-    "nodemon": "^1.11.0"
+    "nodemon": "^1.11.0",
+    "pug": "2.0.0-beta11",
+    "static-favicon": "^1.0.2"
   }
 }

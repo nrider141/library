@@ -1,14 +1,15 @@
 extends layout
 
-.loginContainer
-  form(style='display: block;margin: auto;width: 500px;')
-    .form-group
-      label(for='exampleInputEmail1') Email address
+block content
+  .loginContainer
+    form(style='display: block;margin: auto;width: 500px;')
+      .form-group
+        label(for='exampleInputEmail1') Email address
+        |  
+        input.form-control(type='email', ng-model='email', placeholder='Email')
+      .form-group
+        label(for='exampleInputPassword1') Password
+        |  
+        input.form-control(type='password', ng-model='password', placeholder='Password')
       |  
-      input.form-control(type='email', ng-model='email', placeholder='Email')
-    .form-group
-      label(for='exampleInputPassword1') Password
-      |  
-      input.form-control(type='password', ng-model='password', placeholder='Password')
-    |  
-    button.btn.btn-default(type='submit', ng-click='login($event)') Login
+      button.btn.btn-default(type='submit', ng-click='login($event)') Login

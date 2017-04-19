@@ -1,3 +1,5 @@
+'use strict';
+
 const express = require('express');
 const Books = require("../models/books");
 const Borrowers = require("../models/borrowers");
