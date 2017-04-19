@@ -15,7 +15,7 @@ extends layout
           td
             span(ng-if='!$ctrl.editCopyFlag') {{copy.status}}
             .form-group(ng-if='$ctrl.editCopyFlag')
-              input.form-control(type='text', placeholder='copy id', ng-model='copy.status')
+              input.form-control(type='text', placeholder='Copy-ID', ng-model='copy.status')
           td {{copy.lastBorrowed}}
           td
             button.btn.btn-default(ng-click='$ctrl.editCopy(book)') {{$ctrl.editLabel}}
